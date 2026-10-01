@@ -265,18 +265,6 @@ STATUS   : VALID
 ================================
 ```
 
-## Validation Status
-
-| Stage                      | Status |
-| -------------------------- | ------ |
-| Gas Sensor → STM32 I2C     | PASS   |
-| STM32 sensor acquisition   | PASS   |
-| STM32 UART7 → ESP32-A      | PASS   |
-| ESP32-A UART reception     | PASS   |
-| ESP32-A → ESP32-B ESP-NOW  | PASS   |
-| ESP32-B packet parsing     | PASS   |
-| Human-readable gas display | PASS   |
-
 ## Repository Structure
 
 ```text
