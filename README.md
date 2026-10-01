@@ -37,14 +37,14 @@ Grove Multichannel Gas Sensor V2
 * STM32MP157D-DK1 Discovery Board
 * OpenSTLinux
 * Linux I2C5
-* Linux device: `/dev/i2c-1`
+* Linux device: `/dev****1`
 * UART7
-* Linux UART device: `/dev/ttySTM2`
+* Linux UART device: `/dev****`
 
 ### Gas Sensor
 
 * Seeed Grove Multichannel Gas Sensor V2
-* I2C address: `0x08`
+* I2C address: `0***`
 
 ### ESP32-A
 
@@ -117,7 +117,7 @@ status = "okay";
 After reboot:
 
 ```text
-/dev/i2c-1
+/dev*****1
 ```
 
 was available.
@@ -129,15 +129,15 @@ The Cortex-M4 resource node was not changed.
 The sensor uses I2C address:
 
 ```text
-0x08
+0***
 ```
 
 The selected commands are:
 
 ```text
-0x01 -> GM-102B / NO₂
-0x03 -> GM-302B / Ethanol
-0x07 -> GM-702B / CO
+0x** -> GM-102B / NO₂
+0x** -> GM-302B / Ethanol
+0x** -> GM-702B / CO
 ```
 
 The read sequence is:
@@ -157,7 +157,7 @@ Interpret as little-endian raw value
 UART7 is exposed as:
 
 ```text
-/dev/ttySTM2
+/dev******
 ```
 
 Configuration:
@@ -283,17 +283,11 @@ grove-gas-telemetry/
 │   └── device-tree/
 │
 ├── esp32/
-│   ├── esp32-a-uart-espnow/
-│   │   └── esp32-a-uart-espnow.ino
-│   └── esp32-b-gas-receiver/
-│       └── esp32-b-gas-receiver.ino
-│
-├── hardware/
-│   ├── wiring.md
-│   └── pinout.md
-│
-└── test-results/
-    └── milestone-01-validation.md
+   ├── esp32-a-uart-espnow/
+   │   └── esp32-a-uart-espnow.ino
+   └── esp32-b-gas-receiver/
+       └── esp32-b-gas-receiver.ino
+
 ```
 
 ## Current Scope
